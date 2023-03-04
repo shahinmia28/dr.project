@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+.icon-font h5,
+span {
+  font-size: 13px;
+  margin-bottom: 0;
+  font-family: "PT Serif", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.color-list {
+  color: #062a4d;
+  color: #d0df56;
+  color: #6ec1e4;
+  color: #50aab2;
+  color: #e5f3f4;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-my {
+  text-transform: uppercase;
+  padding: 15px 20px;
+  background: #d0df56;
+  color: #393939;
+  border-radius: 0;
+  border: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.4s linear;
+}
+.btn-my:hover {
+  background: #aebc47;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.title h2 {
+  padding-top: 40px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #6ec1e4;
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.title h2::before {
+  content: "";
+  height: 30px;
+  width: 4px;
+  background: #50aab2;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+}
+.title p {
+  font-size: 18px;
+  text-align: justify;
+  color: #717171;
+}
+@media (max-width: 772px) {
+  .title {
+    margin-bottom: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .title h2 {
+    padding-top: 10px;
+    font-size: 30px;
+  }
+  .title h2::before {
+    height: 20px;
+    width: 3px;
+  }
+  .title p {
+    font-size: 15px;
   }
 }
